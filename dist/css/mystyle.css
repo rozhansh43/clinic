@@ -1,0 +1,477 @@
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    right: 110%;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent black;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 13;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+
+/* Modal Content */
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 67%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+
+/* Add Animation */
+
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+
+/* The Close Button */
+
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #00c0ef;
+    color: white;
+}
+
+.modal-body {
+    padding: 2px 16px;
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #00c0ef;
+    color: white;
+}
+
+.box-body-forms {
+    width: 76%;
+    padding: 15px;
+}
+
+.box-footer-forms {
+    width: 88%;
+    padding: 15px;
+    display: grid;
+}
+
+.form-select-lg {
+    width: 100%;
+}
+
+.section-title {
+    padding: 50px;
+    background: aliceblue;
+    border-top: 5px solid grey;
+}
+
+.section-footer {
+    background: aliceblue;
+    width: 100%;
+    padding: 35px;
+}
+
+
+/* Modal Content */
+
+.delete-modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+
+/* The Close Button */
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+input[type=checkbox] {
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+}
+
+input[type=checkbox]:focus {
+    outline: 0;
+}
+
+.toggle {
+    height: 32px;
+    width: 52px;
+    border-radius: 16px;
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    border: 2px solid #474755;
+    background: linear-gradient(180deg, #2D2F39 0%, #1F2027 100%);
+    transition: all 0.2s ease;
+}
+
+.toggle:after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 1px 2px rgba(7, 10, 20, 0.2);
+    transition: all 0.2s cubic-bezier(0.5, 0.1, 0.75, 1.35);
+}
+
+.toggle:checked {
+    border-color: #40a5c4;
+}
+
+.toggle:checked:after {
+    transform: translatex(20px);
+}
+
+.user-panel {
+    height: 60px;
+}
+
+.navbar-static-top {
+    background: #00c0ef;
+}
+
+.navbar-static-top a {
+    color: white;
+}
+
+.modal-header .close {
+    opacity: 1;
+    color: white;
+    margin-top: 20px;
+}
+
+
+/* search bar */
+
+#myInput {
+    background-image: url('/css/searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+
+#myTable {
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+#myTable th,
+#myTable td {
+    text-align: left;
+    padding: 12px;
+}
+
+#myTable tr {
+    border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header,
+#myTable tr:hover {
+    background-color: #f1f1f1;
+}
+
+#myTable th,
+#myTable td {
+    text-align: right;
+}
+.nav-justified li a{
+    color: black!important;
+}
+.nav-justified .active a{
+color: cadetblue!important;
+}
+
+/* selective check box */
+
+.multiselect {
+    width: 200px;
+}
+
+.selectBox {
+    position: relative;
+}
+
+.selectBox select {
+    width: 100%;
+    font-weight: bold;
+}
+
+.overSelect {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+#checkboxes {
+    display: none;
+    border: 1px #dadada solid;
+}
+
+#checkboxes label {
+    display: block;
+}
+
+#checkboxes label:hover {
+    background-color:#40a5c4;
+}
+
+.otherpills {
+    
+    padding:10px 16px 10px 57px;
+}
+textarea{
+    width: 89%;
+    height: 102px;
+}
+.other-pills {
+    width: 89%;
+}
+.btn-info:focus{
+    background-color: #40a5c4;
+}
+.sidebar-toggle:focus,
+.sidebar-toggle:active {
+    color: white;
+}
+
+.bg-red .inner p {
+    padding-top: 23px;
+}
+.box-title{
+    padding: 20px;
+}
+
+
+.step-indicator {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+}
+
+.step-indicator .step-icon {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: #c2c2c2;
+    font-size: 10px;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    line-height: 50px;
+    font-size: 20px;
+}
+
+.step.active .step-icon {
+    background: crimson;
+}
+
+.step p {
+    text-align: center;
+    position: absolute;
+    bottom: -40px;
+    color: #c2c2c2;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.step.active p a {
+    color: crimson;
+}
+
+.step.step2 p,
+.step.step3 p {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.indicator-line {
+    width: 100%;
+    height: 2px;
+    background: #c2c2c2;
+    flex: 1;
+}
+
+.indicator-line.active {
+    background: crimson;
+}
+
+@media screen and (max-width: 500px) {
+    .step p {
+        font-size: 11px;
+        bottom: -20px;
+    }
+}
+
+.box {
+    width: 95%!important;
+    margin: auto;
+}
+
+.step-indicator {
+    width: 80%;
+    margin: auto;
+}
+.box-body-forms{
+    margin: auto;
+}
+.step-indicator .step p {
+    width: 100px;
+}
+
+.tab-content {
+    margin-top: 50px;
+}
+
+.form-control {
+    width: 89%;
+}
+.form-select-lg{
+    width: 89%;
+}
+.text-white{
+    color: white!important;
+}
+.section-footer-btn{
+    float: left;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.section-footer-btn button{
+    margin: 5px;
+}
+.box-footer-forms{
+    width: 73%;
+}
+.form-group label{
+    padding: 10px;
+}
+.active-tab{
+    background-color: rgb(0, 0, 0)!important;
+}
+/* tab changer */
+
+ 
+
